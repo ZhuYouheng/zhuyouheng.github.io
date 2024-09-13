@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youheng Zhu Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .header, .footer {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header p {
+            margin: 0;
+            font-style: italic;
+        }
+        .header .flex-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0px 90px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .nav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: #f0f0f0;
+            color: purple;
+        }
+        .section-title {
+            font-size: 24px;
+            margin: 20px 0;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .section-content {
+            margin: 20px 0;
+        }
+        .section-content dl {
+            margin: 0;
+        }
+        .section-content dt {
+            font-weight: normal; /* 取消全局加粗 */
+        }
+        .section-content dd {
+            margin: 0 0 0 20px;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .small-text {
+            font-size: 0.9em;
+        }
+        .external-link {
+            color: #00aaff; /* 外部链接的颜色 */
+        }
+        .external-link2 {
+            color: #000000; /* 外部链接的颜色 */
+        }
+        .external-link:hover {
+            color: purple; /* 外部链接悬停时的颜色 */
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        video {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        .map-container {
+            text-align: center;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            width: 300px;
+            height: 200px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 300px; /* 设置适当的高度 */
+            border: none;
+        }
+        .right_data {
+            float: right;
+        }
+        .indented-small-small-text {
+            padding-left: 20px;
+            font-size: 0.85em;
+        }
+        #backToTopBtn {
+            display: none; /* 默认隐藏 */
+            position: fixed; /* 固定位置 */
+            bottom: 40px; /* 距离底部20px */
+            right: 30px; /* 距离右侧30px */
+            z-index: 99; /* 确保按钮在其他元素之上 */
+            font-size: 22px; /* 字体大小 */
+            border: none; /* 无边框 */
+            outline: none; /* 无轮廓 */
+            background-color: #007bff; /* 背景颜色 */
+            color: white; /* 字体颜色 */
+            cursor: pointer; /* 鼠标指针 */
+            padding: 15px; /* 内边距 */
+            border-radius: 4px; /* 圆角 */
+        }
+
+        #backToTopBtn:hover {
+            background-color: #555; /* 悬停时的背景颜色 */
+        }
+
+
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<!-- 在 </body> 标签之前添加 -->
+<button onclick="topFunction()" id="backToTopBtn" title="回到顶部">Back To Top ⬆</button>
+<script>
+    // 获取按钮
+    var backToTopBtn = document.getElementById("backToTopBtn");
+
+    // 当用户滚动页面时，执行 scrollFunction
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block"; // 显示按钮
+        } else {
+            backToTopBtn.style.display = "none"; // 隐藏按钮
+        }
+    }
+
+    // 当用户点击按钮时，回到顶部
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+<body>
+    <div class="container">
+        <!-- <div class="header">
+            <p>无论你欲往何方，伊鲁席尔永在月旁；</p>
+            <p>无论你身在何处，伊鲁席尔仍是故乡。</p>
+            <p>Wherever you go, the moon still sets in Irithyll.</p>
+            <p>Wherever you may be, Irithyll is your home.</p>
+        </div> -->
+
+        <div class="nav">
+            <a href="index.html">Home</a>
+        </div>
+        <div class="section-content">
+            <h2 class="section-title">☯ My Attitude Towards the Philosophy of Mathematics</h2>
+            <P>
+                Despite my initial exposure to math was from an entirely empirical and hands-on perspective (namely, the physicists' way),
+                My attitude towards the philosophy of mathematics is more inclined to <span class="bold-text">formalism</span>.<br/>
+                Philosopically, math is a deductive system equipped with a set of axioms and rules of inference. 
+                The truth of a mathematical statement is determined by the logical consequence of the axioms and rules, and may not infer a certain
+                meaning in the real world. In this sense, <span class="bold-text">math "can be" seen as a game of symbols and rules</span>.<br/>
+                However, the choice of the axioms and rules is not arbitrary, but is guided by the simple logic
+                of human beings. The development of math was never based on rigorous logical systems, but was driven by the intuition
+                and "what seems to be true". The axioms and rules are then chosen to be consistent with that intuition. Therefore, mathematicians
+                uses natural language to think and do the reasoning, instead of actually relying on a pure formal system.<br/>
+                Of course, the process brings about many problems, for example, the inductive property of the natural numbers is something
+                that consists with our intuition, since it generally describes the process of unstoppably doing something means that everything can be done, which
+                is a simple extention of our intuition with finite number. 
+                And we know today that it is true within the Peano axioms. However, such extention can not be applied simply to uncountable sets, as it's not 
+                the result of any axiom (I am not getting into well-ordering and transfinite induction at the moment).
+                Similar case is the axiom of choice, which can be intuitive to some people, while not to the others. <br/>
+                The reason for all this is that in real world, there is no such thing as "infinite" or "uncountable", and the concept of "infinity" is
+                purely mathematical. Even as much as the sands in the universe, it is still finite. Therefore, one's acceptance of a certain axiom is
+                purely based on one's stance on the philosophy of math, and is not a matter of "truth" or "falsehood".<br/>
+                Of course, concepts of analysis are heavily based on the concept of "infinity", and analysis is everywhere inside and outside of math.
+                How can someone say that "infinite" does not exist or is not important? The is a question I'll get to later.<br/>
+                <span class="bold-text">An Illustrative Example of Why Infinity is not Realistic Based:</span><br/>
+                One familiar with model theory may know the famous Lowenheim-Skolem theorem, which states that any infinite model has a countable model,
+                a famous "paradox" relating to which is the Skolem's paradox. We may now consider a countable transitive model of ZFC: \(\mathbf{M}\), with a stronger
+                meta theory (say, ZFC + "there exists a strongly inaccessible cardinal"). We have
+                \[
+                    \mathbf{M} \models \mathcal{P}(\mathbb{N}) \text{ is uncountable}
+                \]
+                or more precisely,
+                \[
+                    \mathbf{M} \models \neg (\exists f: \mathbb{N} \to \mathcal{P}(\mathbb{N}) \text{ is a bijection})
+                \]
+                However, since \(\mathbf{M}\) is countable, meaning that in the meta theory, there exists a bijection 
+                between \(\mathbb{N}\) and \(\mathcal{P}(\mathbb{N})\). From the countable condition
+                \[
+                    ZFC + \exists\kappa \vdash \exists f: \mathbb{N} \to \{x\in \mathbf{M}: x\in \mathcal{P}(\mathbb{N})\} \text{ is a bijection}
+                \]
+                Of course, there is no real "pradox", but things goes out of instinct when we are dealing with "infinite" objects.
+                Two observation can be drawn from this type of paradox:<br/>
+                &emsp;&emsp;<span class="bold-text">1. </span>The universe of \(\mathbf{M}\) is not rich enough to contain the bijection between a set \(A\) and \(\mathbb{N}\), therefore 
+                a set can be "uncountable" in the universe of \(\mathbf{M}\), while "countable" in the meta theory.<br/>
+                &emsp;&emsp;<span class="bold-text">2. </span>A set \(B\) described by a first-order formula in the universe of \(\mathbf{M}\) may not be the same as the set \(B\) described
+                by the same formula in the meta theory. Since any element \(x\) of \(B\) in \(\mathbf{M}\) will be extraly constrained by \(x\in\mathbf{M}\). In other
+                words, the set of the same formula contains less elements in a universe that is less rich.<br/>
+                Here point 2 it is especially important as "a power set is always larger than the original set" is a theorem in ZFC, 
+                and should holds even in the meta theory. In this sense the former example
+                could be confusing until one realizes that \(\mathcal{P}(\mathbb{N})\) is not the same in the universe of \(\mathbf{M}\) as in the meta theory,
+                allowing it to be equally large as \(\mathbb{N}\).
+            </P>
+        </div>
+        <div class="section-content">
+            <h2 class="section-title">🧲 My Attitude Towards the Relation of Mathematics and Physics, and Other Applied Subjects</h2>
+            <P>
+                However fancy the theories can be, Physics is a subject of experimentation. Math is only a tool, a language to describe the world, and it works 
+                because it appears to be. In other words, math builds a model to describe the world, and physicists does refinement to it.<br/>
+                The volume of an object is something we can observe, and we build a mathematical tool called "calculus" to describe it,
+                and we are happy to see that it fits well with our observation. Then, we are interested in how math can develop while agreeing on the elementary
+                properties that the tool is primarily intended for. Starting from "integration" and "volume", we construct measure, which agrees on the elementary part
+                of integration, and allows us to study some less well-behaved functions. This is useful because the limit of a sequence of well-behaved functions
+                is not necessarily well-behaved, and Lebesgue Integral provides a closure of functions under operations we are interested in.
+            </P>
+            <p>
+                With that said, if mathematicians chose another set of axioms, the math would be different, but the physics would not. Then, our description of physics
+                depends on the set of mathematical language we use, and could be a bit different from what we see today.
+            </p>
+            <p>
+                The same applies to other applied subjects, such as statistics, which can be seen as an application of probability theory. The probability theory
+                on the other hand, despite its modern measure-theoretic formulation, is studied in other settings as well. For example, people also study probability 
+                theory without the countable additivity. Eventually, one can argue that there is no probability in reality at all, only the lack of information.
+                As Einstein once said, "God does not play dice with the universe".
+            </p>
+        </div>
+        <!--
+        Einstein, Brown Motion;
+        -->
+
+        
+</body>
+</html>
