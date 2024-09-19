@@ -186,7 +186,7 @@
                 My attitude towards the philosophy of mathematics is more inclined to <span class="bold-text">formalism</span>.<br/>
                 Philosopically, math is a deductive system equipped with a set of axioms and rules of inference. 
                 The truth of a mathematical statement is determined by the logical consequence of the axioms and rules, and may not infer a certain
-                meaning in the real world. In this sense, <span class="bold-text">math "can be" seen as a game of symbols and rules</span>.<br/>
+                meaning in the real world. In this sense, <span class="bold-text">math can be seen as a game of symbols and rules</span>.<br/>
                 However, the choice of the axioms and rules is not arbitrary, but is guided by the simple logic
                 of human beings. The development of math was never based on rigorous logical systems, but was driven by the intuition
                 and "what seems to be true". The axioms and rules are then chosen to be consistent with that intuition. Therefore, mathematicians
@@ -196,12 +196,29 @@
                 is a simple extention of our intuition with finite number. 
                 And we know today that it is true within the Peano axioms. However, such extention can not be applied simply to uncountable sets, as it's not 
                 the result of any axiom (I am not getting into well-ordering and transfinite induction at the moment).
-                Similar case is the axiom of choice, which can be intuitive to some people, while not to the others. <br/>
-                The reason for all this is that in real world, there is no such thing as "infinite" or "uncountable", and the concept of "infinity" is
+                Similar case is the axiom of choice, which can be intuitive to some people, while not to the others. <i style="color: red;">The intuition of AC comes from the simple 
+                idea that "we can always choose something respectively from a set of non-empty sets",  but AC itself is an axiom that one can choose to accept or not. This also points out
+                the nature of math, that is, people choose some, but not all of their simple intuitive logics, formalize them to create an axiom system.
+                Why not choose all of them? Because the natural intuition of human beings can generate contradictions (e.g. Russell's paradox), and we only choose and formalize those that
+                assures (although we can't) consistency.
+                </i><i style="color: rgb(0, 55, 255);">Then, one may also ask, does the axioms have to be intuitive?
+                    The answer is not necessarily. People do study for example, ZFC but the axiom of regularity is rejected, which is the basis
+                    of a whole branch of set theory called "non-well-founded set theory". One can also reject all existing axioms and create a new set of axioms, 
+                    or even deduction rules. Then, there's a new math totally different from the existing one. However, it is a question whether such a math
+                    is useful, or can effectively model the real world as we hope it to be. As I emphasized before, math is just a game of symbols. It's just that
+                    we choose to play the one game among the many that happens to be useful.
+                </i>
+                <br/>
+                The intrinsic complexity of math comes from that in real world, there is no such thing as "infinite" or "uncountable", and the concept of "infinity" is
                 purely mathematical. Even as much as the sands in the universe, it is still finite. Therefore, one's acceptance of a certain axiom is
-                purely based on one's stance on the philosophy of math, and is not a matter of "truth" or "falsehood".<br/>
-                Of course, concepts of analysis are heavily based on the concept of "infinity", and analysis is everywhere inside and outside of math.
-                How can someone say that "infinite" does not exist or is not important? The is a question I'll get to later.<br/>
+                purely based on one's stance on the philosophy of math, and is not a matter of "truth" or "falsehood". <i style="color: red;">In general, 
+                we choose to accept "infinity" becasue it is interesting and useful, with which the world of math is way richer, we are able to 
+                study more things, and potentially have more applications. With that said, one can also choose to reject "infinity", but then we will have much less useful tools. Such an axiom system
+                may be enough for a computer scientist, but definately not for a physicists. 
+                </i><br/>
+                Of course, concepts of analysis are heavily based on the concept of "infinity", and analysis is everywhere inside and outside of math whenever we want to 
+                study continuity.
+                How can someone say that "infinite" does not exist in real life? The is a question I'll get to later.<br/>
                 <span class="bold-text">An Illustrative Example of Why Infinity is not Realistic Based:</span><br/>
                 One familiar with model theory may know the famous Lowenheim-Skolem theorem, which states that any theory with infinite model has a countable model,
                 a famous "paradox" relating to which is the Skolem's paradox. We may now consider a countable transitive model of ZFC: \(\mathbf{M}\), with a stronger
@@ -252,13 +269,23 @@
                 depends on the set of mathematical language we use, and could be a bit different from what we see today. Imagine this scenario: physicists one day
                 discovered that the volume of a specific shape deviates from what the calculus predicts. Even this happens, we can still rightfully say that the
                 math isn't wrong, only that the physics needs to be refined, in this case we will need to consider a new formula that describes the volume of that specific 
-                shape. 
+                shape. <i style="color: red;">Even further, what could happen is that one day people abandon all existing math, and build a new one
+                    using new axioms and even new reasoning rules. Then, we may have a much simpler description of physics and other application subjects.
+                    In this sense, the new math can be seen as more useful than the old one, but it is not necessarily "more true". The process is similar to
+                    the first time people discover that "the earth goes around the sun instead of the other way around" could be a more aligent theory. From today's
+                    view, we can say that the heliocentric theory is more useful, but not necessarily "more true", as neither of them is (lol).
+                    But of course, one thing could happen is that we may not use any our natural language to describe or do reasoning with the new math any more,
+                    and everyone will have to stick with the rigorous formal system for mathematical research.
+                </i>
             </p>
             <p>
                 The same applies to other applied subjects, such as statistics, which can be seen as an application of probability theory. The probability theory
                 on the other hand, despite its modern measure-theoretic formulation, is studied in other settings as well. For example, people also study probability 
                 theory without the countable additivity. Eventually, one can argue that there is no probability in reality at all, only the lack of information.
-                As Einstein once said, "God does not play dice with the universe".
+                As Einstein once said:
+                 \[\text{"God does not play dice with the universe"}\]
+                <i style="color: rgb(98, 0, 255);">In spite of that, at the end of the day, we stick with measure-theoretic probability theory because it provides stronger results than the others,
+                and is fitting well with real-world applications as far as we can see.</i>
             </p>
         </div>
         <!--
