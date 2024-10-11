@@ -164,6 +164,23 @@
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 </script>
+<style>
+    .toggle-link {
+        color: blue;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+</style>
+<script>
+    function toggleContent() {
+        var content = document.getElementById("content");
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
 <body>
     <div class="container">
         <!-- <div class="header">
@@ -222,11 +239,14 @@
                 also the first course I achieved full marks in my university life.
                 There are way more examples than I can list here.
             </p>
-            <p>
-                I am also interested in the possibility of AI agents such as LLMs combined with interactive theorem provers for autimatic theorem proving and discovering.
-                As a theory person, I am always eager to make sure that proofs are correct and rigorous, which is a subtle thing given that mathematicians uses natural
-                language for derivation, and can sometimes be <i>hand-waving</i>.
-            </p>
+            <a href="javascript:void(0);" onclick="toggleContent()" class="toggle-link">Expand: About autimatic theorem prover</a>
+            <div id="content" style="display: none;">
+                <p>
+                    I am also interested in the possibility of AI agents such as LLMs combined with interactive theorem provers for autimatic theorem proving and discovering.
+                    As a theory person, I am always eager to make sure that proofs are correct and rigorous, which is a subtle thing given that mathematicians uses natural
+                    language for derivation, and can sometimes be <i>hand-waving</i>.
+                </p>
+            </div>
             <p>
                 Click here to see my <a href="philosophy of math.html" class="external-link">Philosophy of Mathematics and Its Relation to Other Subjects</a>.
             </p>
@@ -330,9 +350,29 @@
                         An illustrative example is provided to verify our theoretical results, demonstrating our analysis holds in broader settings.
                     </p>
                 </li>
-            </ul>    
+            </ul> 
+        </div>
+        <div class="section-content" id="Notes">
+            <h2 class="section-title">📘 Notes</h2>
+            <ul>
+                <li>
+                    <p>
+                        Differential Geometry: An Equilibrium Proof to Minimum Surface Equation [<a href="#DG:MinimumSurface" class="external-link">See Projects</a>]<br/>
+                        <span class="bold-text">Youheng Zhu</span>. <i>July 2024</i> <br/>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        A Note on Belief Space Binning for POMDPs: Guarantees under Smoothness Condition [In process]<br/>
+                        <span class="bold-text">Youheng Zhu</span>. <i>October 2024</i> <br/>
+                    </p>
+                </li>
+                    
+            </ul>
+                
+        </div>   
         <div class="section-content" id="Projects">
-            <h2 class="section-title">🔍 Interesting Projects and Side Projects</h2>
+            <h2 class="section-title">📜 Interesting Projects and Side Projects</h2>
             <ul>
                 <li>
                     <p><span class="bold-text">Fluid Simulation: Simple LBM on Taichi</span></p>
@@ -359,7 +399,7 @@
                     </div>
                 </li>
                 <li>
-                    <p><span class="bold-text">Differential Geometry: An Equilibrium Proof to Minimum Surface Equation</span></p>
+                    <p id="DG:MinimumSurface"><span class="bold-text">Differential Geometry: An Equilibrium Proof to Minimum Surface Equation</span></p>
                     <p>
                         In physics, the minimization of energy or action represents equilibrium states and real motion. 
                         This concept transitions from classical mechanics to analytical mechanics. 
