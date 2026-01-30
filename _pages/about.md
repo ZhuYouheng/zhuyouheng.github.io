@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I’m Youheng. I’m interested in mathematics and statistical learning theory. I’m a first-year PhD student in the Department of Industrial Engineering and Management Sciences at Northwestern University, advised by Prof. [Yiping Lu](https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/lu-yiping.html).
+Hi! I’m Youheng. I’m interested in mathematics and statistical learning theory. I’m a first-year PhD student in the Department of Industrial Engineering and Management Sciences at Northwestern University, advised by Prof. [Yiping Lu](https://2prime.github.io/).
 
 Before Northwestern, I had the fortune to work with Prof. [Nan Jiang](https://nanjiang.cs.illinois.edu/) in the CS Department at UIUC starting in Summer 2024. I also had the privilege to work with Prof. [Yuheng Bu](https://buyuheng.github.io/) in the ECE Department at the University of Florida starting in Summer 2023. I received my B.Eng. (with honors) from Huazhong University of Science and Technology (HUST) in June 2025.
 
