@@ -1,0 +1,43 @@
+{% include base_path %}
+
+<div class="pub-item" style="margin-bottom: 1.2em;">
+  <div class="pub-title" style="font-weight: 600;">
+    {% if post.paperurl %}
+      <a href="{{ post.paperurl }}">{{ post.title }}</a>
+    {% else %}
+      <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
+  </div>
+
+  {% if post.authors %}
+    <div class="pub-authors">
+      {{ post.authors }}
+    </div>
+  {% endif %}
+
+  <div class="pub-venue">
+    {% if post.venue %}
+      <em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+    {% elsif post.date %}
+      {{ post.date | date: "%Y" }}
+    {% endif %}
+  </div>
+
+  <div class="pub-links">
+    {% if post.paperurl %}
+      <a href="{{ post.paperurl }}">paper</a>
+    {% endif %}
+    {% if post.codeurl %}
+      {% if post.paperurl %} / {% endif %}
+      <a href="{{ post.codeurl }}">code</a>
+    {% endif %}
+    {% if post.bibtexurl %}
+      {% if post.paperurl or post.codeurl %} / {% endif %}
+      <a href="{{ post.bibtexurl }}">bibtex</a>
+    {% endif %}
+    {% if post.slidesurl %}
+      {% if post.paperurl or post.codeurl or post.bibtexurl %} / {% endif %}
+      <a href="{{ post.slidesurl }}">slides</a>
+    {% endif %}
+  </div>
+</div>
