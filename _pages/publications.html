@@ -3,10 +3,12 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+body_class: academic-page
+excerpt: "Preprints and conference papers by Youheng Zhu on statistical learning theory and applied probability."
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <p class="section-intro">Preprints and conference papers. Also available on <a href="{{ site.author.googlescholar }}">Google Scholar &rarr;</a></p>
 {% endif %}
 
 {% include base_path %}
@@ -20,7 +22,7 @@ author_profile: true
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        <h2 class="publication-category">{{ category[1].title }}</h2>
         {% assign title_shown = true %}
       {% endunless %}
       {% include publication-single-minimal.html %}
@@ -31,6 +33,5 @@ author_profile: true
     {% include publication-single-minimal.html %}
   {% endfor %}
 {% endif %}
-
 
 

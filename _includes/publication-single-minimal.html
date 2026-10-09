@@ -1,13 +1,21 @@
 {% include base_path %}
 
-<div class="pub-item" style="margin-bottom: 1.2em;">
-  <div class="pub-title" style="font-weight: 600;">
+<article class="pub-item">
+  <div class="pub-venue">
+    {% assign publication_year = post.date | date: "%Y" %}
+    {% if post.venue %}
+      <span class="pub-badge{% if post.category == 'preprints' %} pub-badge--preprint{% endif %}">{{ post.venue }}</span>{% unless post.venue contains publication_year %}<span class="pub-year">{{ publication_year }}</span>{% endunless %}
+    {% else %}
+      <span class="pub-year">{{ publication_year }}</span>
+    {% endif %}
+  </div>
+  <h3 class="pub-title">
     {% if post.paperurl %}
       <a href="{{ post.paperurl }}">{{ post.title }}</a>
     {% else %}
       <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
     {% endif %}
-  </div>
+  </h3>
 
   {% if post.authors %}
     <div class="pub-authors">
@@ -15,29 +23,18 @@
     </div>
   {% endif %}
 
-  <div class="pub-venue">
-    {% if post.venue %}
-      <em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
-    {% elsif post.date %}
-      {{ post.date | date: "%Y" }}
-    {% endif %}
-  </div>
-
   <div class="pub-links">
     {% if post.paperurl %}
-      <a href="{{ post.paperurl }}">paper</a>
+      <a href="{{ post.paperurl }}" aria-label="Read {{ post.title | escape }}">Paper <span aria-hidden="true">↗</span></a>
     {% endif %}
     {% if post.codeurl %}
-      {% if post.paperurl %} / {% endif %}
-      <a href="{{ post.codeurl }}">code</a>
+      <a href="{{ post.codeurl }}">Code</a>
     {% endif %}
     {% if post.bibtexurl %}
-      {% if post.paperurl or post.codeurl %} / {% endif %}
-      <a href="{{ post.bibtexurl }}">bibtex</a>
+      <a href="{{ post.bibtexurl }}">BibTeX</a>
     {% endif %}
     {% if post.slidesurl %}
-      {% if post.paperurl or post.codeurl or post.bibtexurl %} / {% endif %}
-      <a href="{{ post.slidesurl }}">slides</a>
+      <a href="{{ post.slidesurl }}">Slides</a>
     {% endif %}
   </div>
-</div>
+</article>

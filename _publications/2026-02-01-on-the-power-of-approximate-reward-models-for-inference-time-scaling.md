@@ -1,5 +1,5 @@
 ---
-title: "On the Power of (Approximate) Reward Models for Inference-Time Scaling"
+title: "On the Power of (Approximate) Reward Models for Inference-Time Scaling: Sequential Monte Carlo and Beyond"
 collection: publications
 category: conferences
 permalink: /publication/2026-02-01-on-the-power-of-approximate-reward-models-for-inference-time-scaling

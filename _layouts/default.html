@@ -11,7 +11,7 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body id="top"{% if page.body_class %} class="{{ page.body_class | escape }}"{% endif %}>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
