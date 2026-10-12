@@ -7,4 +7,5 @@ date: 2026-07-10
 venue: "arXiv preprint"
 authors: "<strong>Youheng Zhu</strong>, Yiping Lu"
 paperurl: "https://arxiv.org/pdf/2607.09547"
+videourl: "/assets/videos/interpolators-explainer.mp4"
 ---

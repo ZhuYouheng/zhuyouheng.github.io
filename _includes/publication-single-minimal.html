@@ -27,6 +27,9 @@
     {% if post.paperurl %}
       <a href="{{ post.paperurl }}" aria-label="Read {{ post.title | escape }}">Paper <span aria-hidden="true">↗</span></a>
     {% endif %}
+    {% if post.videourl %}
+      <a href="{{ post.videourl | relative_url }}" target="_blank" rel="noopener" aria-label="Watch video explanation of {{ post.title | escape }} (opens in a new tab)">Video <span aria-hidden="true">↗</span></a>
+    {% endif %}
     {% if post.codeurl %}
       <a href="{{ post.codeurl }}">Code</a>
     {% endif %}
