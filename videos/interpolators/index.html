@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A video explanation of High-Dimensional Interpolators Can Be Fragile, with English subtitles by default and optional Chinese subtitles.">
+  <title>Interpolators — Video explanation | Youheng Zhu</title>
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/paper-video.css">
+  <script src="/assets/js/interpolators-subtitles.js" defer></script>
+  <script src="/assets/js/paper-video.js" defer></script>
+</head>
+<body class="paper-video-page">
+  <header class="video-masthead">
+    <nav aria-label="Main navigation">
+      <a href="/">Youheng Zhu</a>
+      <a href="/publications/">Publications</a>
+    </nav>
+  </header>
+  <main class="video-page">
+    <header class="video-header">
+      <p class="video-eyebrow">Video explanation · 11 min 30 sec</p>
+      <h1>High-Dimensional Interpolators Can Be Fragile</h1>
+      <p class="video-subtitle">Heavy Tails and High-Dimensional Large Deviations</p>
+      <div class="video-meta">
+        <span>Youheng Zhu · Yiping Lu</span>
+        <a href="https://arxiv.org/pdf/2607.09547">Read paper <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+    <section class="player" aria-label="Paper video player">
+      <div class="player-toolbar">
+        <label for="language">Subtitles
+          <select id="language">
+            <option value="en" selected>English</option>
+            <option value="zh">Chinese (Simplified)</option>
+            <option value="off">Off</option>
+          </select>
+        </label>
+        <button id="fullscreen" type="button">Fullscreen</button>
+      </div>
+      <div class="stage" id="stage">
+        <video id="video" lang="en" controls controlslist="nofullscreen" preload="metadata" playsinline src="/assets/videos/interpolators-explainer.mp4?v=268f56632234">
+          Your browser does not support HTML video.
+        </video>
+        <div id="captions" aria-live="off"><span hidden></span></div>
+        <div class="fulltools">
+          <label for="fullLanguage">Subtitles
+            <select id="fullLanguage" aria-label="Fullscreen subtitles">
+              <option value="en" selected>English</option>
+              <option value="zh">Chinese (Simplified)</option>
+              <option value="off">Off</option>
+            </select>
+          </label>
+          <button id="exitFullscreen" type="button">Exit fullscreen</button>
+        </div>
+      </div>
+      <p class="video-note">English subtitles are on by default. Select Chinese (Simplified) or Off at any time. Japanese narration; diagrams remain in English.</p>
+      <p id="video-error" role="alert" hidden>The video could not be loaded. Please reload the page and try again.</p>
+      <noscript><p>This player requires JavaScript for subtitles. Please enable JavaScript and reload the page.</p></noscript>
+    </section>
+    <footer class="video-footer">
+      <a href="/#publications">← Back to publications</a>
+    </footer>
+  </main>
+</body>
+</html>
