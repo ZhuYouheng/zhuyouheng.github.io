@@ -1,0 +1,37 @@
+<figure class="norm-spectrum" aria-labelledby="norm-spectrum-heading">
+  <span class="norm-spectrum__eyebrow">An intuitive spectrum of norms</span>
+  <p class="norm-spectrum__heading" id="norm-spectrum-heading">From local density differences to smooth test functions</p>
+  <div class="norm-spectrum__direction" aria-label="Intuitive direction from larger norm to smaller norm">
+    <span>Larger norm</span>
+    <span class="norm-spectrum__arrow" aria-hidden="true"></span>
+    <span>Smaller norm</span>
+  </div>
+  <div class="norm-spectrum__track" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <ol class="norm-spectrum__stops">
+    <li class="norm-spectrum__stop">
+      <span class="norm-spectrum__number" aria-hidden="true">01</span>
+      <strong class="norm-spectrum__name"><span>L<sup>2</sup></span>Density differences</strong>
+      <p class="norm-spectrum__finding">Empirical measure<br>has infinite norm</p>
+      <p>Point masses have no square-integrable density.</p>
+    </li>
+    <li class="norm-spectrum__stop">
+      <span class="norm-spectrum__number" aria-hidden="true">02</span>
+      <strong class="norm-spectrum__name"><span>Total variation</span>Bounded tests</strong>
+      <p class="norm-spectrum__finding"><span class="norm-spectrum__formula">\(L^1\subseteq(L^\infty)^*\)</span>Empirical measure<br>does not converge</p>
+      <p>Bounded tests distinguish finite sample support from the continuous target.</p>
+    </li>
+    <li class="norm-spectrum__stop">
+      <span class="norm-spectrum__number" aria-hidden="true">03</span>
+      <strong class="norm-spectrum__name"><span>Wasserstein W<sub>1</sub></span>Lipschitz tests</strong>
+      <p class="norm-spectrum__finding">Dimension-dependent<br>convergence rate</p>
+      <p>Compares averages of Lipschitz functions.</p>
+    </li>
+    <li class="norm-spectrum__stop">
+      <span class="norm-spectrum__number" aria-hidden="true">04</span>
+      <strong class="norm-spectrum__name"><span>Negative Sobolev H<sup>&minus;a</sup></span>Smooth tests</strong>
+      <p class="norm-spectrum__finding"><span class="norm-spectrum__formula">\(\mathbb E\|\hat\nu_n-\pi\|_{H^{-a}}^2\)</span><span class="norm-spectrum__formula">\(\lesssim n^{-1}\)</span></p>
+      <p>For a &gt; d/2, point evaluation is continuous and point masses belong to the dual space.</p>
+    </li>
+  </ol>
+  <figcaption class="norm-spectrum__caption">The arrow is schematic, with quantitative comparisons governed by the test classes and smoothness assumptions. Here \(\hat\nu_n=n^{-1}\sum_{i=1}^n\delta_{X_i}\), with \(X_i\overset{\mathrm{iid}}\sim\pi\) and a smooth target density on the compact manifold.</figcaption>
+</figure>

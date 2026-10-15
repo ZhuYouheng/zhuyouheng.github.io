@@ -1,0 +1,50 @@
+.academic-page .blog-entry {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.academic-page .blog-entry__date {
+  margin: 0 0 10px;
+  color: var(--academic-muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.academic-page .blog-entry__title {
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  line-height: 1.4;
+}
+
+.academic-page .blog-entry__title a {
+  color: var(--academic-ink);
+  text-decoration: none;
+}
+
+.academic-page .blog-entry__title a:hover {
+  color: var(--academic-accent);
+  text-decoration: underline;
+}
+
+.academic-page .blog-entry__excerpt {
+  margin: 0 0 15px;
+  color: var(--academic-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.academic-page .blog-entry__link {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.academic-page .blog-entry__link:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .academic-page .blog-entry__title { font-size: 24px; }
+}

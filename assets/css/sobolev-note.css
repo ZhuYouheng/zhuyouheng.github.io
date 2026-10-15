@@ -1,0 +1,409 @@
+/* Article-local reading and diagram styles. */
+.academic-page #main:has(.sobolev-note) {
+  display: grid;
+  grid-template-columns: minmax(0, 740px);
+  justify-content: center;
+  max-width: 836px;
+  column-gap: 0;
+}
+
+.sobolev-note {
+  --note-ink: #29232e;
+  --note-muted: #716b75;
+  --note-accent: #654878;
+  --note-border: #e5e0e5;
+  --note-wash: #f2edf3;
+  color: var(--note-ink);
+  font-size: 16px;
+  line-height: 1.85;
+  overflow-wrap: break-word;
+}
+
+.sobolev-note .note-lead {
+  max-width: 40em;
+  margin: 0 0 1.7em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  line-height: 1.7;
+  letter-spacing: -.012em;
+  color: #584660;
+}
+
+.sobolev-note .note-kicker,
+.sobolev-note .note-callout__label,
+.sobolev-note .note-proof__label,
+.sobolev-note .norm-spectrum__eyebrow {
+  display: block;
+  margin: 0 0 9px;
+  color: var(--note-accent);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .13em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.sobolev-note h2 {
+  margin: 2.7em 0 .8em;
+  padding: 0;
+  border: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -.03em;
+  color: var(--note-ink);
+  scroll-margin-top: 100px;
+}
+
+.sobolev-note h3 {
+  margin: 2em 0 .75em;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -.01em;
+  scroll-margin-top: 100px;
+}
+
+.sobolev-note p { margin: 0 0 1.25em; }
+.sobolev-note li { margin-bottom: .45em; }
+.sobolev-note a { text-underline-offset: 4px; }
+.sobolev-note a:focus-visible { outline: 2px solid var(--note-accent); outline-offset: 4px; }
+
+.sobolev-note .note-toc {
+  margin: 30px 0 40px;
+  padding: 20px 0 18px;
+  border-top: 1px solid var(--note-border);
+  border-bottom: 1px solid var(--note-border);
+}
+
+.sobolev-note .note-toc ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 28px;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.sobolev-note .note-toc li { margin: 0; padding-left: 3px; }
+.sobolev-note .note-toc a { text-decoration: none; }
+.sobolev-note .note-toc a:hover { text-decoration: underline; }
+
+.sobolev-note .note-callout {
+  margin: 28px 0;
+  padding: 24px 28px;
+  border: 1px solid var(--note-border);
+  border-left: 3px solid #ab94b8;
+  border-radius: 0 6px 6px 0;
+  background: #f8f5f8;
+}
+
+.sobolev-note .note-callout--theorem { background: var(--note-wash); }
+.sobolev-note .note-callout > :last-child,
+.sobolev-note .note-proof > :last-child { margin-bottom: 0; }
+.sobolev-note .note-callout h3 { margin-top: 0; }
+
+.sobolev-note .note-proof {
+  margin: 30px 0;
+  padding: 24px 0 6px;
+  border-top: 1px solid var(--note-border);
+}
+
+.sobolev-note .note-proof h3:first-of-type { margin-top: 16px; }
+.sobolev-note .note-algorithm { margin: 0; padding-left: 23px; }
+.sobolev-note .note-algorithm > li { margin: 0 0 17px; padding-left: 7px; }
+.sobolev-note .note-algorithm > li:last-child { margin-bottom: 0; }
+.sobolev-note .note-algorithm > li::marker { color: var(--note-accent); font-weight: 600; }
+
+/* Display mathematics remains readable at narrow widths. */
+.sobolev-note .note-equation,
+.sobolev-note mjx-container[display="true"],
+.sobolev-note .MathJax_Display,
+.sobolev-note .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 5px 0 9px;
+  scrollbar-width: thin;
+  scrollbar-color: #bdabc7 transparent;
+}
+
+.sobolev-note .note-equation { margin: 18px 0; }
+.sobolev-note .note-equation mjx-container[display="true"] { margin: .4em 0 !important; }
+.sobolev-note .note-references { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--note-border); font-size: 13px; color: var(--note-muted); }
+.sobolev-note .note-references li { margin-bottom: 12px; }
+
+/* The spectrum is a sequence of test-function viewpoints. */
+.sobolev-note .norm-spectrum {
+  margin: 32px 0 36px;
+  padding: 27px 24px 23px;
+  border: 1px solid var(--note-border);
+  border-radius: 8px;
+  background: #fcfbf8;
+}
+
+.sobolev-note .norm-spectrum__heading {
+  margin: 0;
+  color: var(--note-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -.02em;
+  line-height: 1.4;
+}
+
+.sobolev-note .norm-spectrum__track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  height: 4px;
+  margin: 14px 0 20px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.sobolev-note .norm-spectrum__direction {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  color: var(--note-accent);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.sobolev-note .norm-spectrum__direction > span:not(.norm-spectrum__arrow) { white-space: nowrap; }
+.sobolev-note .norm-spectrum__arrow {
+  position: relative;
+  flex: 1;
+  min-width: 24px;
+  height: 1px;
+  background: var(--note-accent);
+}
+.sobolev-note .norm-spectrum__arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid var(--note-accent);
+  border-right: 1px solid var(--note-accent);
+  transform: rotate(45deg);
+}
+
+.sobolev-note .norm-spectrum__track span:nth-child(1) { background: #d4c7d8; }
+.sobolev-note .norm-spectrum__track span:nth-child(2) { background: #bda8c8; }
+.sobolev-note .norm-spectrum__track span:nth-child(3) { background: #9476a5; }
+.sobolev-note .norm-spectrum__track span:nth-child(4) { background: #654878; }
+
+.sobolev-note .norm-spectrum__stops {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 19px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sobolev-note .norm-spectrum__stop { min-width: 0; margin: 0; }
+.sobolev-note .norm-spectrum__number { display: block; margin: 0 0 7px; color: #8a7893; font-size: 10px; font-variant-numeric: tabular-nums; letter-spacing: .1em; }
+.sobolev-note .norm-spectrum__name { display: block; min-height: 70px; margin: 0 0 11px; font-size: 16px; line-height: 1.45; color: var(--note-ink); }
+.sobolev-note .norm-spectrum__name span { display: block; font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+.sobolev-note .norm-spectrum__stop p { margin: 0; font-size: 12px; line-height: 1.75; color: #625a66; }
+.sobolev-note .norm-spectrum__stop .norm-spectrum__finding {
+  min-height: 90px;
+  margin: 0 0 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--note-border);
+  color: var(--note-accent);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.sobolev-note .norm-spectrum__formula { display: block; margin-bottom: 3px; white-space: nowrap; }
+.sobolev-note .norm-spectrum__formula mjx-container { font-size: 100% !important; }
+.sobolev-note .norm-spectrum__stop:last-child .norm-spectrum__name { color: var(--note-accent); }
+.sobolev-note .norm-spectrum__caption { margin: 21px 0 0; padding-top: 16px; border-top: 1px solid var(--note-border); color: var(--note-muted); font-size: 12px; line-height: 1.75; }
+.sobolev-note .norm-spectrum sup,
+.sobolev-note .norm-spectrum sub { font-size: .72em; }
+
+@media (max-width: 680px) {
+  .sobolev-note .norm-spectrum { padding: 23px 20px; }
+  .sobolev-note .norm-spectrum__stops { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .sobolev-note .norm-spectrum__name { min-height: 0; margin-bottom: 8px; }
+  .sobolev-note .norm-spectrum__stop p { font-size: 13px; }
+  .sobolev-note .norm-spectrum__stop .norm-spectrum__finding { min-height: 90px; font-size: 12px; }
+  .sobolev-note .norm-spectrum__heading { font-size: 21px; }
+}
+
+@media (max-width: 480px) {
+  .sobolev-note { font-size: 15px; line-height: 1.85; }
+  .sobolev-note .note-lead { font-size: 19px; }
+  .sobolev-note h2 { font-size: 26px; }
+  .sobolev-note h3 { font-size: 17px; }
+  .sobolev-note .note-toc ol { grid-template-columns: minmax(0, 1fr); gap: 9px; }
+  .sobolev-note .note-callout { padding: 20px 17px; }
+  .sobolev-note .norm-spectrum { padding: 21px 17px; }
+  .sobolev-note .norm-spectrum__stops { gap: 24px 19px; }
+  .sobolev-note .norm-spectrum__name { font-size: 15px; }
+}
+
+@media print {
+  .sobolev-note .note-toc { display: none; }
+  .sobolev-note .norm-spectrum,
+  .sobolev-note .note-callout { break-inside: avoid; }
+  .sobolev-note .note-equation,
+  .sobolev-note mjx-container[display="true"] { overflow: visible; }
+}
+
+/* Citation controls belong to this research note only. */
+.academic-page .note-date-tail {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.academic-page .note-cite-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 26px;
+  margin-left: 8px;
+  padding: 3px 8px;
+  border: 1px solid #c6b6ce;
+  border-radius: 5px;
+  background: #f2edf3;
+  color: #654878;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.academic-page .note-cite-button__quote {
+  height: 14px;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.academic-page .note-cite-button:hover {
+  border-color: #654878;
+  background: #e9e0ee;
+  color: #654878;
+}
+
+.academic-page .note-cite-button:focus-visible {
+  outline: 2px solid #654878;
+  outline-offset: 4px;
+}
+
+.sobolev-note .note-copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 7px 16px;
+  border: 1px solid #c6b6ce;
+  border-radius: 5px;
+  background: var(--note-wash);
+  color: var(--note-accent);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sobolev-note .note-copy-button:hover {
+  border-color: var(--note-accent);
+  background: #e9e0ee;
+  color: var(--note-accent);
+}
+
+.sobolev-note .note-copy-button:focus-visible,
+.sobolev-note .note-citation__code:focus-visible {
+  outline: 2px solid var(--note-accent);
+  outline-offset: 4px;
+}
+
+.sobolev-note .note-citation {
+  min-width: 0;
+  margin-top: 42px;
+  padding-top: 10px;
+  border-top: 1px solid var(--note-border);
+}
+
+.sobolev-note .note-citation h2 { margin-top: 20px; }
+.sobolev-note .note-citation > p { font-size: 14px; }
+.sobolev-note .note-citation__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--note-border);
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  background: var(--note-wash);
+}
+
+.sobolev-note .note-citation__label {
+  color: var(--note-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sobolev-note pre.note-citation__code {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding: 18px 20px;
+  border: 1px solid var(--note-border);
+  border-radius: 0 0 6px 6px;
+  background: #fcfbf8;
+  color: var(--note-ink);
+  font-size: 12px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+.sobolev-note .note-citation__code code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  white-space: inherit;
+  user-select: text;
+}
+
+.sobolev-note p.note-citation__status {
+  min-height: 1.8em;
+  margin: 10px 0 0;
+  color: var(--note-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+@media (max-width: 480px) {
+  .sobolev-note .note-citation__toolbar { padding: 10px 12px; }
+  .sobolev-note pre.note-citation__code { padding: 16px 12px; font-size: 11px; }
+}
+
+@media print {
+  .academic-page .note-cite-button,
+  .sobolev-note .note-copy-button,
+  .sobolev-note .note-citation__status { display: none; }
+  .sobolev-note .note-citation { break-inside: avoid; }
+}

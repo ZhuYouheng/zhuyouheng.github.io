@@ -1,0 +1,22 @@
+---
+layout: archive
+title: "Blog"
+permalink: /blog/
+author_profile: true
+body_class: academic-page
+excerpt: "Research notes on statistical learning, Monte Carlo methods, and applied probability by Youheng Zhu."
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+
+<p class="section-intro">Notes on statistical learning, Monte Carlo methods, and applied probability.</p>
+
+{% assign notes = site.notes | sort: 'date' | reverse %}
+{% for note in notes %}
+<article class="blog-entry" aria-labelledby="blog-entry-{{ forloop.index }}">
+  <p class="blog-entry__date"><time datetime="{{ note.date | date_to_xmlschema }}">{{ note.date | date: "%B %-d, %Y" }}</time></p>
+  <h2 class="blog-entry__title" id="blog-entry-{{ forloop.index }}"><a href="{{ note.url | relative_url }}">{{ note.title | escape }}</a></h2>
+  <p class="blog-entry__excerpt">{{ note.excerpt | strip_html | escape }}</p>
+  <a class="blog-entry__link" href="{{ note.url | relative_url }}" aria-label="Read {{ note.title | escape }}">Read note <span aria-hidden="true">&rarr;</span></a>
+</article>
+{% endfor %}
