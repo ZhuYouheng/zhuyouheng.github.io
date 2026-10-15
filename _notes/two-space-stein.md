@@ -191,7 +191,7 @@ The test class determines which differences between distributions remain visible
 
 **At the density end, point masses matter.** An empirical measure is a finite sum of Dirac masses. Against a smooth target density on a positive-dimensional manifold, their difference has no $$L^2(dx)$$ density. Correspondingly, evaluation at a point is not a bounded functional on $$L^2$$: an increasingly narrow bump can have small $$L^2$$ norm and a large value at that point.
 
-Total variation also sees the finite sample support exactly. If $$A=\{Z_1,\ldots,Z_N\}$$ and $$\pi$$ has a density, then $$\widehat\nu_w(A)=1$$ and $$\pi(A)=0$$. With the convention $$d_{\mathrm{TV}}(\mu,\nu)=\sup_A|\mu(A)-\nu(A)|$$, the distance is one.
+Total variation also sees the finite sample support exactly. If $$A=\{Z_1,\ldots,Z_N\}$$ and $$\pi$$ has a density, then $$\widehat\nu_w(A)=1$$ and $$\pi(A)=0$$. With the convention $$d_{\mathrm{TV}}(\mu,\nu)=\sup_A\lvert\mu(A)-\nu(A)\rvert$$, the distance is one.
 
 **Geometric and smooth tests average over that local structure.** The Wasserstein distance $$W_1$$ compares measures through 1-Lipschitz test functions. Nearby points have nearby function values, and an i.i.d. empirical measure converges to its sampling distribution in this metric on a compact space. The convergence rates reflect the dimension and geometry of the distribution; [Weed and Bach](https://arxiv.org/abs/1707.00087) develop this dependence in detail.
 
