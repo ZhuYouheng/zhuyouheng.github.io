@@ -16,7 +16,7 @@ share: false
 related: false
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/sobolev-note.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/sobolev-note.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
 <div class="sobolev-note" markdown="1">
 
