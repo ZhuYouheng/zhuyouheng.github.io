@@ -6,6 +6,7 @@ author: "Youheng Zhu"
 date: 2026-10-14
 completed_note: "completed in June 2026"
 show_cite: true
+videourl: /videos/two-space-stein/
 excerpt: "A two-space Sobolev refinement of Lam and Zhang's Stein-kernelized Monte Carlo estimator, with a full proof and an extension to Stein-generated Hilbert scales."
 permalink: /notes/two-space-stein/
 body_class: academic-page

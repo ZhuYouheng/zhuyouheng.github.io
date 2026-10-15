@@ -260,7 +260,32 @@
   .sobolev-note mjx-container[display="true"] { overflow: visible; }
 }
 
-/* Citation controls belong to this research note only. */
+/* Companion video and citation controls belong to this research note only. */
+.academic-page .note-video-link {
+  margin: 18px 0 26px;
+}
+
+.academic-page .note-video-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 7px 13px;
+  border: 1px solid #d9cddd;
+  border-radius: 6px;
+  background: var(--academic-wash);
+  color: var(--academic-accent);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.academic-page .note-video-button:hover {
+  background: #e8deed;
+  color: var(--global-link-color-hover);
+}
+
 .academic-page .note-date-tail {
   display: inline-block;
   white-space: nowrap;
