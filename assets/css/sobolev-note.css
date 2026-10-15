@@ -17,6 +17,7 @@
   font-size: 16px;
   line-height: 1.85;
   overflow-wrap: break-word;
+  overflow-x: clip;
 }
 
 .sobolev-note .note-lead {

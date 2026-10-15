@@ -40,7 +40,7 @@ layout: default
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>{% if page.show_cite %} <span class="note-date-tail">{% endif %}{% if page.completed_note %} <span class="page__completion-note">({{ page.completed_note | escape }})</span>{% endif %}{% if page.show_cite %} {% include note-cite-button.html %}</span>{% endif %}</p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {% if page.collection == 'notes' %}Posted:{% else %}{{ site.data.ui-text[site.locale].date_label | default: "Published:" }}{% endif %}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>{% if page.show_cite %} <span class="note-date-tail">{% endif %}{% if page.completed_note %} <span class="page__completion-note">({{ page.completed_note | escape }})</span>{% endif %}{% if page.show_cite %} {% include note-cite-button.html %}</span>{% endif %}</p>
         {% endif %}    
         </header>
       {% endunless %}
